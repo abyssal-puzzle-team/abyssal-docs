@@ -75,10 +75,24 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            to: '/docs/intro',
+            label: '文档',
             position: 'left',
-            label: 'Docs',
+          },
+          {
+            to: '/blog',
+            label: '博客',
+            position: 'left',
+          },
+          {
+            href: 'https://github.com/abyssal-puzzle-team',
+            label: 'GitHub',
+            position: 'right',
+          },
+          {
+            href: 'https://abyssal-puzzle.top',
+            label: '网站',
+            position: 'right',
           },
         ],
       },
