@@ -19,12 +19,15 @@ const sidebars = {
     'intro',
     {
       type: 'category',
-      label: 'abyssal-wechat',
+      label: 'ap-wechat',
       link: {
         type: 'doc',
-        id: 'abyssal-wechat',
+        id: 'ap-wechat',
       },
-      items: [],
+      items: [
+        'ap-wechat/user-menu',
+        'ap-wechat/admin-menu',
+      ],
     },
   ],
 };

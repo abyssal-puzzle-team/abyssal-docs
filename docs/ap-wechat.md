@@ -1,14 +1,14 @@
 ---
-title: Abyssal Puzzle公众号系统(abyssal-wechat)教程
-description: Abyssal Puzzle公众号系统(abyssal-wechat)教程
+title: Abyssal Puzzle公众号系统(ap-wechat)教程
+description: Abyssal Puzzle公众号系统(ap-wechat)教程
 ---
 
-# Abyssal Puzzle公众号系统(abyssal-wechat)教程
-[![GitHub Repo](https://img.shields.io/badge/github-repo-black?logo=github)](https://github.com/abyssal-puzzle-team/abyssal-wechat)
-[![GitHub Repo stars](https://img.shields.io/github/stars/abyssal-puzzle-team/abyssal-wechat)](https://github.com/abyssal-puzzle-team/abyssal-wechat)
+# Abyssal Puzzle公众号系统(ap-wechat)教程
+[![GitHub Repo](https://img.shields.io/badge/github-repo-black?logo=github)](https://github.com/abyssal-puzzle-team/ap-wechat)
+[![GitHub Repo stars](https://img.shields.io/github/stars/abyssal-puzzle-team/ap-wechat)](https://github.com/abyssal-puzzle-team/ap-wechat)
 ![Language Python](https://img.shields.io/badge/language-python-blue?logo=python)
 ## 前言
-Abyssal Puzzle 公众号系统`abyssal-wechat`是为**公众号Puzzle Hunt**提供的新选择，相比功能单一的自动回复，使用公众号开发可以实现**队伍系统、货币系统、预设提示**等功能，提高了基于公众号Puzzle Hunt的上限。<a href="https://github.com/abyssal-puzzle-team/abyssal-wechat">项目仓库</a>
+Abyssal Puzzle 公众号系统`ap-wechat`是为**公众号Puzzle Hunt**提供的新选择，相比功能单一的自动回复，使用公众号开发可以实现**队伍系统、货币系统、预设提示**等功能，提高了基于公众号Puzzle Hunt的上限。<a href="https://github.com/abyssal-puzzle-team/ap-wechat">项目仓库</a>
 
 说明：
 
@@ -30,25 +30,25 @@ Abyssal Puzzle 公众号系统`abyssal-wechat`是为**公众号Puzzle Hunt**提�
 你可以先在腾讯云或<a href="https://www.aliyun.com/minisite/goods">阿里云</a>等平台购买一台轻量服务器。该系统对配置要求不高，2核CPU、1G内存以上即可。系统建议选择**Ubuntu 22.04**（下文以这个为例）或者其他你熟悉命令行操作的系统，地域选择国内任意地区即可。
 
 接下来进入控制台，创建一个实例，设置好密码。记住这里的公网IP，后面会用到。
-![alt text](/img/abyssal-wechat/1.png)
+![alt text](/img/ap-wechat/1.png)
 
 进入防火墙设置，添加防火墙规则，放通全部TCP端口。
 
-![alt text](/img/abyssal-wechat/9.png)
+![alt text](/img/ap-wechat/9.png)
 
 ### 设置微信公众号
 在进行此步骤前，请确保你已经拥有了一个个人公众号。
 
 登录<a href="https://developers.weixin.qq.com/platform">微信开发者平台</a>，进入“公众号”，你可以看到如下界面：
 
-![alt text](/img/abyssal-wechat/2.png)
+![alt text](/img/ap-wechat/2.png)
 
 接下来需要完成以下配置，有些内容后面会用到：
 
 #### 生成AppSecret
 点击AppSecret后的“生成”（这里已经生成过所以没有显示）
 
-![alt text](/img/abyssal-wechat/3.png)
+![alt text](/img/ap-wechat/3.png)
 
 **请妥善保存这里显示的AppSecret**，关闭此窗口后将不再显示。
 
@@ -57,16 +57,16 @@ Abyssal Puzzle 公众号系统`abyssal-wechat`是为**公众号Puzzle Hunt**提�
 
 #### 消息推送
 点击API IP白名单后的“编辑”，URL填写为`http://服务器公网IP:80/`，Token、EncodingAESKey可以随机生成，消息加密选择明文模式<font size="2px" color="grey">（如果有大佬愿意二次开发可以补充一下安全模式的加解密逻辑QAQ）</font>，如下图：
-![alt text](/img/abyssal-wechat/4.png)
+![alt text](/img/ap-wechat/4.png)
 
 ### 下载SSH工具
 SSH工具可以帮我们远程操控服务器。这里以Termius为例，请现在<a href="https://termius.com/">官网</a>注册账号后下载客户端。
-![alt text](/img/abyssal-wechat/5.png)
+![alt text](/img/ap-wechat/5.png)
 
 点击NEW HOST链接一个新主机，IP or Hostname填写服务器的公网IP，Label任意，Username填写root，Password填写最开始服务器的密码。完成后点击Connect即可进入服务器终端。
 
-![alt text](/img/abyssal-wechat/6.png)
-![alt text](/img/abyssal-wechat/7.png)
+![alt text](/img/ap-wechat/6.png)
+![alt text](/img/ap-wechat/7.png)
 
 执行以下命令：
 ```bash
@@ -82,9 +82,9 @@ sudo apt install at
 
 集成开发环境(IDE)建议选择VSCode。
 
-**使用git克隆<a href="https://github.com/abyssal-puzzle-team/abyssal-wechat">abyssal-puzzle-team/abyssal-wechat</a>到你的工作空间。建议先克隆到本地，方便修改。**
+**使用git克隆<a href="https://github.com/abyssal-puzzle-team/ap-wechat">abyssal-puzzle-team/ap-wechat</a>到你的工作空间。建议先克隆到本地，方便修改。**
 
-克隆完成后，在`abyssal-wechat`文件夹打开终端，然后在终端执行以下命令：
+克隆完成后，在`ap-wechat`文件夹打开终端，然后在终端执行以下命令：
 ```bash
 # 创建虚拟环境
 python -m venv .venv
@@ -105,9 +105,9 @@ AppID = "xxx"
 token = "xxx"
 EncodingAESKey = "xxx"
 ```
-填写完毕后，将整个`abyssal-wechat`文件夹使用SFTP移动到服务器上。打开Termius的SFTP，在Hosts一栏双击你刚刚添加的服务器，就可以看到服务器的目录结构：
+填写完毕后，将整个`ap-wechat`文件夹使用SFTP移动到服务器上。打开Termius的SFTP，在Hosts一栏双击你刚刚添加的服务器，就可以看到服务器的目录结构：
 
-![alt text](/img/abyssal-wechat/8.png)
+![alt text](/img/ap-wechat/8.png)
 
 把刚刚设置好的项目文件夹拖到适合的目录（**例如`/home`，下文以这个为例**），并复制它在服务器系统的路径。
 
@@ -124,8 +124,8 @@ After=network.target
 [Service]
 Type=simple
 User=wechatbot
-WorkingDirectory=/home/abyssal-wechat
-ExecStart=/home/abyssal-wechat/.venv/bin/python /home/abyssal-wechat/main.py
+WorkingDirectory=/home/ap-wechat
+ExecStart=/home/ap-wechat/.venv/bin/python /home/ap-wechat/main.py
 Restart=always
 RestartSec=5
 Environment=PYTHONUNBUFFERED=1
@@ -140,12 +140,12 @@ WantedBy=multi-user.target
 执行以下指令启动：
 ```bash
 # 激活虚拟环境
-cd /home/abyssal-wechat
+cd /home/ap-wechat
 cd .venv/bin
 source activate
-cd /home/abyssal-wechat
+cd /home/ap-wechat
 # 设置可执行权限
-sudo chown -R wechatbot /home/abyssal-wechat
+sudo chown -R wechatbot /home/ap-wechat
 # 初始化数据库
 python db_init.py
 # 启动系统服务
@@ -204,7 +204,7 @@ systemctl start wechat-official.service
 ```
 谜题信息存储在不同章节`chapter`内，每个`chapter`对应一条**图文消息**（如下图），属性说明如下：
 
-![alt text](/img/abyssal-wechat/10.png)
+![alt text](/img/ap-wechat/10.png)
 
 `id`：从 1 开始，按顺序填写即可。
 
@@ -292,7 +292,7 @@ ADMIN_USER_IDS = [
 ```
 这里的管理员ID列表要输入的是微信用户的OpenID，需要把Staff都添加进去。查看一位微信用户OpenID的方式如下：
 
-在Termius进入`abyssal-wechat`目录，终端输入：
+在Termius进入`ap-wechat`目录，终端输入：
 ```bash
 journalctl -u wechat-official.service -f
 ```
@@ -305,11 +305,11 @@ Jan 29 15:02:10 e82ze423grsspleu8wyr4gZ python[182770]: Received message:你好 
 ### 应用修改
 **以上两步在本地每次修改后，需要使用Termius的SFTP替换掉原来的文件，然后重新启动即可：**
 ```bash
-cd /home/abyssal-wechat
+cd /home/ap-wechat
 cd .venv/bin
 source activate
-cd /home/abyssal-wechat
-sudo chown -R wechatbot /home/abyssal-wechat
+cd /home/ap-wechat
+sudo chown -R wechatbot /home/ap-wechat
 systemctl restart wechat-official.service
 ```
 
@@ -318,7 +318,7 @@ systemctl restart wechat-official.service
 
 确定没有问题之后，在SFTP删除原来的`abyssal_puzzle.db`数据库，运行`db_init.py`重新创建一个：
 ```bash
-cd /home/abyssal-wechat
+cd /home/ap-wechat
 python db_init.py
 ```
 然后，我们需要**使用at创建定时任务，实现定时开赛**。把下面指令的时间部分替换为你的开赛时间：
@@ -327,7 +327,7 @@ at 20:00 23.01.2026
 ```
 接下来输入：
 ```bash
-/home/abyssal-wechat/.venv/bin/python3 /home/abyssal-wechat/start.py >> /home/abyssal-wechattest.log 2>&1
+/home/ap-wechat/.venv/bin/python3 /home/ap-wechat/start.py >> /home/ap-wechattest.log 2>&1
 ```
 按CTRL+D保存即可。可以使用`atq`查看当前的定时任务。
 
@@ -341,7 +341,7 @@ sudo crontab -e
 ```
 输入`:wq`保存退出。
 
-经过以上设置，你就成功使用了`abyssal-wechat`系统来进行公众号PuzzleHunt的设置！
+经过以上设置，你就成功使用了`ap-wechat`系统来进行公众号PuzzleHunt的设置！
 
 ### 二次开发
 由于本项目开发过程十分紧凑，导致很多接口的实现都较为粗糙，不好扩展，欢迎有能力的使用者进行二次开发。你可能需要使用frp工具来配置内网穿透等，如有疑问可以联系我。
@@ -351,4 +351,4 @@ sudo crontab -e
 <a href="https://developers.weixin.qq.com/doc/subscription/guide/">微信开发者文档</a>
 
 
-感谢支持abyssal-wechat。
+感谢支持ap-wechat。

@@ -107,8 +107,8 @@ const config = {
                 to: '/docs/intro',
               },
               {
-                label: 'abyssal-wechat',
-                to: '/docs/abyssal-wechat',
+                label: 'ap-wechat',
+                to: '/docs/ap-wechat',
               },
             ],
           },
