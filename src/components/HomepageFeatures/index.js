@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'placeholder',
+    title: '为Puzzle Hunt而生',
     Svg: require('@site/static/img/puzzle.svg').default,
     description: (
       <>
@@ -13,7 +13,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'placeholder',
+    title: '简单易用',
     Svg: require('@site/static/img/folder-check.svg').default,
     description: (
       <>
@@ -22,7 +22,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'placeholder',
+    title: '用户友好',
     Svg: require('@site/static/img/users.svg').default,
     description: (
       <>

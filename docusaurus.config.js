@@ -86,10 +86,23 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Information',
+            title: '文档',
             items: [
               {
-                label: 'Website',
+                label: '文档主页',
+                to: '/docs/intro',
+              },
+              {
+                label: 'abyssal-wechat',
+                to: '/docs/abyssal-wechat',
+              },
+            ],
+          },
+          {
+            title: '相关链接',
+            items: [
+              {
+                label: '网站',
                 href: 'https://abyssal-puzzle.top',
               },
               {
@@ -97,18 +110,18 @@ const config = {
                 href: 'https://github.com/abyssal-puzzle-team',
               },
               {
-                label: 'Blog',
+                label: '博客',
                 to: '/blog',
               },
             ],
           },
           {
-            title: 'More',
+            title: '更多',
             items: [
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Abyssal Puzzle Team. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
