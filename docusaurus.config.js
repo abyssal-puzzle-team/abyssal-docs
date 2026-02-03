@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Abyssal Puzzle文档站',
-  tagline: '欢迎来到Abyssal Puzzle文档站',
+  tagline: 'From the puzzle of Abyss, to the key of Cryst.',
   favicon: 'img/logo.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -68,7 +68,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'AP文档站',
+        title: 'Abyssal Puzzle文档站',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.png',
@@ -91,7 +91,7 @@ const config = {
           },
           {
             href: 'https://abyssal-puzzle.top',
-            label: '网站',
+            label: 'Abyssal Puzzle 主页',
             position: 'right',
           },
         ],

@@ -8,7 +8,7 @@ description: Abyssal Puzzle公众号系统(ap-wechat)教程
 [![GitHub Repo stars](https://img.shields.io/github/stars/abyssal-puzzle-team/ap-wechat)](https://github.com/abyssal-puzzle-team/ap-wechat)
 ![Language Python](https://img.shields.io/badge/language-python-blue?logo=python)
 ## 前言
-Abyssal Puzzle 公众号系统`ap-wechat`是为**公众号Puzzle Hunt**提供的新选择，相比功能单一的自动回复，使用公众号开发可以实现**队伍系统、货币系统、预设提示**等功能，提高了基于公众号Puzzle Hunt的上限。<a href="https://github.com/abyssal-puzzle-team/ap-wechat">项目仓库</a>
+Abyssal Puzzle 公众号系统`ap-wechat`是为**公众号Puzzle Hunt**提供的新选择，相比功能单一的自动回复，使用公众号开发可以实现**队伍系统、货币系统、预设提示**等功能，提高了基于公众号Puzzle Hunt的上限。
 
 说明：
 
