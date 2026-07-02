@@ -6,8 +6,4 @@ sidebar_position: 1
 
 欢迎来到 Abyssal Puzzle 文档。
 
-这里是 Abyssal Puzzle 相关项目的官方文档主页占位符。
-
-## 待添加内容
-
-文档内容正在建设中，敬请期待。
+你可以参考 ap-wechat 部署教程，部署自己的公众号 Puzzle Hunt 系统！
