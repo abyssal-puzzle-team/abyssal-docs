@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/puzzle.svg').default,
     description: (
       <>
-        placeholder
+        
       </>
     ),
   },
@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/folder-check.svg').default,
     description: (
       <>
-        placeholder
+        
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList = [
     Svg: require('@site/static/img/users.svg').default,
     description: (
       <>
-        placeholder
+        
       </>
     ),
   },
